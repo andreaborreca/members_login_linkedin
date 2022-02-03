@@ -4,6 +4,8 @@
     <description>
         Logs in users usign Linkedin Log in
     </description>
+    <repo type="github">https://github.com/iosonopino/members_login_linkedin</repo>
+    <url type="issues">https://github.com/iosonopino/members_login_linkedin/issues</url>
     <types>
         <type>Members</type>
         <type>Third Party Integration</type>
