@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<extension id="members_login_Linkedin" status="released" xmlns="http://getsymphony.com/schemas/extension/1.0">
+<extension id="members_login_linkedin" status="released" xmlns="http://getsymphony.com/schemas/extension/1.0">
     <name>Members: Linkedin Login</name>
     <description>
         Logs in users usign Linkedin Log in
