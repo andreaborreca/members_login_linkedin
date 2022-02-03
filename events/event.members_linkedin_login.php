@@ -80,7 +80,6 @@ class eventmembers_linkedin_login extends SectionEvent
             
             if (is_object($response) && isset($response->access_token)) {
                 $_SESSION['ACCESS_TOKEN'] = $response->access_token;
-                $atoken = $response->access_token;
                 $url = "https://api.linkedin.com/v2/me?projection=(id,firstName,lastName,profilePicture,vanityName(displayImage~digitalmediaAsset:playableStreams))";
                 $url_e = "https://api.linkedin.com/v2/emailAddress?q=members&projection=(elements*(handle~))";
                 $ch = curl_init($url);
@@ -192,32 +191,6 @@ class eventmembers_linkedin_login extends SectionEvent
                             ));
                         }
                         $m->commit();
-
-                        $entry = new Entry();
-                        $entry->set('section_id', 37);
-                        $entry->setData(302, array(
-                            'relation_id' => $m->get('id'),
-                        ));
-                        $entry->setData(298, array(
-                            'value' => $response->screen_name,
-                        ));
-                        $entry->setData(305, array(
-                            'value' => $response->id,
-                        ));
-                        $entry->setData(335, array(
-                            'value' => "https://www.linkedin.com/in/$VANITYNAME",
-                        ));
-                        $entry->setData(312, array(
-                            'value' => $atoken,
-                        ));
-                        $entry->setData(303, array(
-                            'value' => $response_e->elements[0]->{"handle~"}->emailAddress,
-                        ));
-                        $entry->setData(299, array(
-                            'value' => 'linkedin',
-                        ));
-                        $entry->commit();
-
                         $m = $m->get('id');
                     }
                     $_SESSION['OAUTH_MEMBER_ID'] = $m;
