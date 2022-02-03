@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="members_login_Linkedin" status="released" xmlns="http://getsymphony.com/schemas/extension/1.0">
+    <name>Members: Linkedin Login</name>
+    <description>
+        Logs in users usign Linkedin Log in
+    </description>
+    <types>
+        <type>Members</type>
+        <type>Third Party Integration</type>
+        <type>Linkedin</type>
+    </types>
+    <dependencies>
+        <dependency version="1.9.0">members</dependency>
+    </dependencies>
+    <authors>
+        <author>
+            <name github="iosonopino">Andrea Borreca</name>
+            <website>https://humanbit.com/</website>
+        </author>
+    </authors>
+    <releases>
+        <release version="1.0.0" date="2019-06-10" min="2.7.0" max="2.x.x">
+            - Initial release
+        </release>
+    </releases>
+</extension>
